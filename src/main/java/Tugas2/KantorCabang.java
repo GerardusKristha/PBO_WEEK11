@@ -1,5 +1,5 @@
 package Tugas2;
-import Tugas1.Pegawai;
+import Tugas1.*;
 /**
  *
  * @author G.Kristha
@@ -121,6 +121,25 @@ public class KantorCabang {
             }
         }
         return max;
+    }
+    
+        public String cetakGajiTotalSetiaPegawai() {
+        String managerString = "Manager : \n";
+        String sekretarisString = "Sekretaris : \n";
+        String salesString = "Sales : \n";
+        
+        for (int i = 0; i < getJumlahPegawai(); i++) {
+            if (pegawaiArray[i] instanceof Manager) {
+                managerString += pegawaiArray[i].toString() + " dengan gaji total : " + pegawaiArray[i].getGajiTotal() + "\n";
+            }
+            if (pegawaiArray[i] instanceof Sekretaris) {
+                sekretarisString += pegawaiArray[i].toString() + " dengan gaji total : " + pegawaiArray[i].getGajiTotal() + "\n";
+            }
+            if (pegawaiArray[i] instanceof Sales) {
+                salesString += pegawaiArray[i].toString() + " dengan gaji total : " + pegawaiArray[i].getGajiTotal() + "\n";
+            }
+        }
+        return "Daftar Pegawai : \n"+managerString+sekretarisString+salesString;
     }
         
     public String toString(){

@@ -40,29 +40,8 @@ public class KantorCabang_Main {
 
         kc.setPegawaiArray(pgw, 5);
         System.out.println(kc.toString());
-        cetakGajiTotalSetiaPegawai(kc);
+        System.out.println(kc.cetakGajiTotalSetiaPegawai());
     }
 
-    public static void cetakGajiTotalSetiaPegawai(KantorCabang kc) {
-        String managerString = "Manager : \n";
-        String sekretarisString = "Sekretaris : \n";
-        String salesString = "Sales : \n";
-        Pegawai[] pgw = kc.getPegawaiArray();
-        
-        for (int i = 0; i < kc.getJumlahPegawai(); i++) {
-            if (pgw[i] instanceof Manager) {
-                managerString += pgw[i].toString() + " dengan gaji total : " + pgw[i].getGajiTotal() + "\n";
-            }
-            if (pgw[i] instanceof Sekretaris) {
-                sekretarisString += pgw[i].toString() + " dengan gaji total : " + pgw[i].getGajiTotal() + "\n";
-            }
-            if (pgw[i] instanceof Sales) {
-                salesString += pgw[i].toString() + " dengan gaji total : " + pgw[i].getGajiTotal() + "\n";
-            }
-        }
-        System.out.println("Daftar Pegawai : ");
-        System.out.println(managerString);
-        System.out.println(sekretarisString);
-        System.out.println(salesString);
-    }
+
 }
