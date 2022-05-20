@@ -40,7 +40,7 @@ public class KantorCabang_Main {
 
         kc.setPegawaiArray(pgw, 5);
         System.out.println(kc.toString());
-        System.out.println(kc.cetakGajiTotalSetiaPegawai());
+        System.out.println(kc.cetakGajiTotalSetiapPegawai());
     }
 
 

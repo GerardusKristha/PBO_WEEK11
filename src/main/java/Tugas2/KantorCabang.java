@@ -113,7 +113,7 @@ public class KantorCabang {
         return min;
     }
     
-        public Pegawai getPegawaiGajiTerbesar (){
+    public Pegawai getPegawaiGajiTerbesar (){
         Pegawai max = pegawaiArray[0];
         for(int i=0; i<jumlahPegawai;i++){
             if(pegawaiArray[i].getGajiTotal()>max.getGajiTotal()){
@@ -123,7 +123,7 @@ public class KantorCabang {
         return max;
     }
     
-        public String cetakGajiTotalSetiaPegawai() {
+    public String cetakGajiTotalSetiapPegawai() {
         String managerString = "Manager : \n";
         String sekretarisString = "Sekretaris : \n";
         String salesString = "Sales : \n";
